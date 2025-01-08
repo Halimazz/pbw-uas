@@ -1,6 +1,6 @@
 <?php
 // Konfigurasi database
-$host = 'localhost';       // Nama host (default: localhost)
+$host     = 'localhost';       // Nama host (default: localhost)
 $username = 'root';        // Username MySQL (default: root)
 $password = '';            // Password MySQL (default: kosong)
 $database = 'webdailyjournal'; // Nama database yang digunakan
