@@ -25,7 +25,6 @@
                             <td>
                                 <strong><?= $row["username"] ?></strong>
                                 <br>pada : <?= $row["created_at"] ?>
-                                <br>oleh : <?= $row["username"] ?>
                             </td>
                             <td><?= $row["password"] ?></td>
                             <td>

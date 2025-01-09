@@ -133,6 +133,7 @@ if (!isset($_SESSION['username'])) {
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
                 <li class="nav-item"><a class="nav-link" href="admin.php?page=dashboard">Dashboard</a></li>
                 <li class="nav-item"><a class="nav-link" href="article.php">Article</a></li>
+                <li class="nav-item"><a class="nav-link" href="users.php">Users</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <?= $_SESSION['username'] ?>
