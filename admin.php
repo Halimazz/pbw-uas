@@ -106,11 +106,17 @@ if (!isset($_SESSION['username'])) {
             $jumlah_article = $hasil1->num_rows;
 
             //query untuk mengambil data gallery
-            //$sql2 = "SELECT * FROM gallery ORDER BY tanggal DESC";
-            //$hasil2 = $conn->query($sql2);
+            $sql2 = "SELECT * FROM gallery ORDER BY created_at DESC";
+            $hasil2 = $conn->query($sql2);
 
             //menghitung jumlah baris data gallery
-            //$jumlah_gallery = $hasil2->num_rows;
+            $jumlah_gallery = $hasil2->num_rows;
+
+            $sql3 = "SELECT * FROM users ORDER BY created_at DESC";
+            $hasil3 = $conn->query($sql3);
+
+            //menghitung jumlah baris data gallery
+            $jumlah_users = $hasil3->num_rows;
         ?>
         <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center pt-4">
             <div class="col">
@@ -138,7 +144,23 @@ if (!isset($_SESSION['username'])) {
                                 <h5 class="card-title" style="color: black;"><i class="bi bi-camera"></i> Gallery</h5> 
                             </div>
                             <div class="p-3">
-                                <span class="badge rounded-pill text-bg-danger fs-2">6<?php //echo $jumlah_gallery; ?></span>
+                                <span class="badge rounded-pill text-bg-danger fs-2"><?php echo $jumlah_gallery; ?></span>
+                            </div> 
+                        </div>
+                    </div>
+                </a>
+                </div>
+            </div> 
+            <div class="col">
+                <div class="card border border-danger mb-3 shadow" style="max-width: 18rem;">
+                <a href="users.php" style="text-decoration: none;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <div class="p-3">
+                                <h5 class="card-title" style="color: black;"><i class="bi bi-camera"></i> User</h5> 
+                            </div>
+                            <div class="p-3">
+                                <span class="badge rounded-pill text-bg-danger fs-2"><?php echo $jumlah_users; ?></span>
                             </div> 
                         </div>
                     </div>
